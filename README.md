@@ -41,6 +41,7 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 1. What does bcrypt do to slow down attackers?
 
+    The bcryptjs library slows down attackers by giving them another piece of information required to hack your hashed password: accumulative hashing rounds. This is the number of times that your password was hashed using a specific hashing algorithm. Therefore, instead of the attacker just needing the hash and the algorithm used, NOW, the attacker needs to have: the hash, the algorithm used, AND the total number of rounds that were used to generate the hash.
 
 
 1. What are the three parts of the JSON Web Token?
