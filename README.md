@@ -46,6 +46,7 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 1. What are the three parts of the JSON Web Token?
 
+    The three parts of the JSON Web Token are: the header, the payload, and the signature.
 
 
 
