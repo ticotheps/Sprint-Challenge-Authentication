@@ -36,6 +36,7 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 1. What does bcrypt do to help us store passwords in a secure manner?
 
+    The bcryptjs library features a password hashing function that will produce a “hashed” password for us. What is “hashing”? Hashing is a method of cryptography that allows for the conversion of ANY form of data into a UNIQUE string of text. Hashing is different from another password storing method called “encryption” because hashing is designed to work as a one-way function, taking in parameters and an input to produce a unique string. Encryption, on the other hand, is a two-way function that allows for “decryption” or reversing the encryption process using a specific key.
 
 
 1. What does bcrypt do to slow down attackers?
