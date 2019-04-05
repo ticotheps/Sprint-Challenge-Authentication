@@ -1,6 +1,7 @@
 const jwt = require("jsonwebtoken");
 const db = require("../database/dbConfig.js");
 
+const jwtKey = require('../auth/secrets').jwtKey;
 
 // quickly see what this file exports
 module.exports = {
