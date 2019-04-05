@@ -7,6 +7,10 @@ const jwtKey =
 // quickly see what this file exports
 module.exports = {
   authenticate,
+  add,
+  find,
+  findBy,
+  findById,
 };
 
 // implementation details
