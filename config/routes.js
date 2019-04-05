@@ -10,7 +10,8 @@ const secret = require('../auth/authenticate').jwtKey;
 module.exports = server => {
   server.post('/api/register', register);
   server.post('/api/login', login);
-  server.get('/api/jokes', authenticate, getJokes);
+  // server.get('/api/jokes', authenticate, getJokes);
+  server.get('/api/jokes', getJokes);
 };
 
 function register(req, res) {
