@@ -3,6 +3,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const { authenticate } = require('../auth/authenticate');
+
 const secret = require('../auth/authenticate').jwtKey;
 
 module.exports = server => {
