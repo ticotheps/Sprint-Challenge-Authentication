@@ -15,7 +15,6 @@ module.exports = server => {
 };
 
 function register(req, res) {
-  // implement user registration
   let user = req.body;
   const hash = bcrypt.hashSync(user.password, 10);
   user.password = hash;
@@ -30,7 +29,6 @@ function register(req, res) {
 };
 
 function login(req, res) {
-  // implement user login
   let { username, password } = req.body;
 
   Users.findBy({ username })
