@@ -12,6 +12,7 @@ module.exports = server => {
   server.post('/api/login', login);
   // server.get('/api/jokes', authenticate, getJokes);
   server.get('/api/jokes', getJokes);
+  server.get('/api/users', getUsers);
 };
 
 function register(req, res) {
@@ -63,6 +64,14 @@ function getJokes(req, res) {
     .catch(err => {
       res.status(500).json({ message: 'Error Fetching Jokes', error: err });
     });
+}
+
+function getUsers(req, res) {
+  Users.find()
+    .then(users => {
+      res.json(users);
+    })
+    .catch(err => res.send(err));
 }
 
 function generateToken(user) {
