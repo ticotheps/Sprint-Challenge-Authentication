@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 const { authenticate } = require('../auth/authenticate');
 
 const Users = require('../auth/authenticate');
-const secret = require('../auth/authenticate').jwtKey;
+const secret = require('../auth/secrets').jwtKey;
 
 module.exports = server => {
   server.post('/api/register', register);
