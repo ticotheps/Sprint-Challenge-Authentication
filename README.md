@@ -1,5 +1,6 @@
 # Sprint Challenge: Authentication - Dad Jokes
 
+
 This challenge allows you to practice the concepts and techniques learned over the past week and apply them in a concrete project. This Sprint explored Authentication. During this Sprint, you studied Introduction to Authentication, Using Sessions and Cookies, Using JSON Web Tokens (JWT), and Client-side Authentication. In your challenge this week, you will demonstrate proficiency by creating an application that will give you a list of random dad jokes, as long as you are authorized.
 
 - **DISCLAIMER** Authentication is a subject that many people spend a large amount time throughout their careers obtaining knowledge over. This is not something we expect you to have a mastery over, rather, we're preparing you to be able have an intelligent conversation about the subject.
@@ -29,9 +30,25 @@ Implement an User Authentication System in order to access the jokes from the Jo
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 1. What is the purpose of using _sessions_?
-1. What does bcrypt do to help us store passwords in a secure manner.
+
+    One purpose for using sessions is to allow data to persist across multiple HTTP requests to different endpoints. This means that a user would not have to re-enter their credentials (i.e. - username, password, etc.) each time they visited a different web page (that requires authentication) once they’ve already gained access with those same credentials.
+
+
+1. What does bcrypt do to help us store passwords in a secure manner?
+
+    The bcryptjs library features a password hashing function that will produce a “hashed” password for us. What is “hashing”? Hashing is a method of cryptography that allows for the conversion of ANY form of data into a UNIQUE string of text. Hashing is different from another password storing method called “encryption” because hashing is designed to work as a one-way function, taking in parameters and an input to produce a unique string. Encryption, on the other hand, is a two-way function that allows for “decryption” or reversing the encryption process using a specific key.
+
+
 1. What does bcrypt do to slow down attackers?
+
+    The bcryptjs library slows down attackers by giving them another piece of information required to hack your hashed password: accumulative hashing rounds. This is the number of times that your password was hashed using a specific hashing algorithm. Therefore, instead of the attacker just needing the hash and the algorithm used, NOW, the attacker needs to have: the hash, the algorithm used, AND the total number of rounds that were used to generate the hash.
+
+
 1. What are the three parts of the JSON Web Token?
+
+    The three parts of the JSON Web Token are: the header, the payload, and the signature.
+
+
 
 ## Project Set Up
 
